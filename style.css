@@ -157,7 +157,7 @@ button:hover {
     display: block;
     align-items: center;
     justify-content: center;
-    margin: 50px 100px 50px 100px;
+    margin: 50px 50px 50px 50px;
   }
 
   .about-h1 {
@@ -193,6 +193,10 @@ button:hover {
   }
 
   @media screen and (min-width: 700px) {  
+
+    .about-container {
+        margin: 50px 100px 50px 100px;
+      }
 
     .card {
         height: 65vh;
