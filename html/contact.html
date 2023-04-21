@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa607b7c52.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+</head>
+
+<!--Contact info on the top/left of the site -->
+<body id="contact">
+    <div class="contactcontent">
+        <div class="card2">
+            <div class="contact-container">
+                <h1 class="contact-h1">Contact Us</h1>
+                <div class="contact-p">
+                    <div class="emailtext"><i class="fas fa-envelope"></i>e-mail: blablabla@blabla.bla</div><br>
+                    <div class="phonetext"><i class="fas fa-phone"></i>Phone: 000-000-000</div><br>
+                    <div class="messengertext"><i class="fa-brands fa-facebook-messenger"></i>Chat with us on messenger</div>
+                </div>
+                <div class="socialmedia">
+                    Follow Us
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a><hr>
+
+                </div>
+            </div>
+
+            <!--Contact form-->
+            <div class="contact-container1">
+                <form class="form-container1" onsubmit="sendEmail(); reset(); return false;">
+                    <h3 class="contacth3">Send us a message</h3>
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <textarea class="textarea" id="message" rows="6" placeholder="Message"></textarea>
+                    <button class="contactbtn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        
+    <!--Send message from contact form to e-mail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "lydiadoula@gmail.com",
+                Password : "68B4422C8CB649A522C63E3EED27FB615671",
+                To : "lydiadoula@gmail.com",
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Message",                    
+                Body : "Name:" + document.getElementById("name").value
+                    + "<br> Email:" + document.getElementById("email").value
+                    + "<br> Message:" + document.getElementById("message").value
+            }).then(
+            message => alert("Thank you! Your message was sent succesfully")
+            );
+        }
+        // Videóið sem ég gerði contact form út frá 
+        //https://www.youtube.com/watch?v=sGQSz22U8VM&ab_channel=EasyTutorials
+        //Hann talar um að þegar það er komið domain á síðuna þarf maður að 
+        //fara á elastic email síðuna og gera eitthvað þar. 
+        //Svo er hægt að fela passwordið á smtp síðunni.
+    </script>
+</body>
+
+</html>
+
