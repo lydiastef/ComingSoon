@@ -52,7 +52,7 @@ Version:
 .logo img {
     display: flex;
     margin: auto;
-    margin-top: -500px;
+    margin-top: -484px;
     width: 20vh;
     height: auto;
     background-color: black;
@@ -203,7 +203,7 @@ p {
 /*4. About and contact links*/
 .about-contact {
     display: flex;
-    margin: -50px 10px 20px 10px;
+    margin: -20px 10px 20px 10px;
     text-decoration: none;
 }
 
@@ -489,6 +489,10 @@ button:hover {
   @media screen and (min-width: 1000px) {
     .card {
         width: 50%;
+    }
+
+    .logo img {
+        margin-top: -477px;
     }
 
     .contact-link {
