@@ -125,16 +125,6 @@ Version:
     animation: borderAnimation 6s ease-in-out infinite both alternate;
 }
 
-.card::after {
-    content: ".";
-    position: relative;
-    top: -605px/*-30vh*/;
-    right: -128px/*9vh*/;
-    color: #FF7F50;
-    font-size: 250px;
-    z-index: -1;
-}
-
 @keyframes borderAnimation {
     0% {
         border-radius: 5% 5% 5% 5%;
@@ -155,8 +145,20 @@ Version:
 
 
 h1 {
+    position: relative;
     font-size: 34px;
     margin: 5px 20px 30px 20px;
+}
+
+/*The orange dot at the top right*/
+.dot::after {
+    content: ".";
+    position: absolute;
+    bottom: -39px;
+    left: 75%;
+    color: #FF7F50;
+    font-size: 250px;
+    z-index: -1;
 }
 
 .c {
@@ -201,10 +203,15 @@ p {
 }
 
 .input-box {
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
 }
 
 #error1 {
@@ -218,31 +225,30 @@ p {
     margin: 0 20px 0px 20px;
 }
 
-.email {
+#email {
     padding: 12px;
     width: 50vh;
     border-radius: 8px;
     border: none;
-    margin-left: 68px;
-    margin-right: 68px;
-    text-align: center;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
 }
 
 #btn {
-    padding: 12px;
+    padding: 13px;
     width: 22vh;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 8px;
     border: none;
     background-color: #FF7F50;
     color: black;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.374);
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: .1em;
     cursor: pointer;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-top: 10px;
+    margin-left: 0px;
 }
 
 #btn:hover {    
@@ -396,7 +402,7 @@ p {
     text-align: center;
   }
 
-  #name, #email, form textarea {
+  #name1, #email1, form textarea {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.374);
     padding: 12px;
     width: 50vh;
@@ -446,11 +452,6 @@ button:hover {
         font-size: 48px;
     }
 
-    .card::after {
-        top: -592px/*-30vh*/;
-        right: -165px/*9vh*/;
-    }
-
     .time .number {
         font-size: 48px;
     }
@@ -467,6 +468,7 @@ button:hover {
 
     .input-box {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
     }
@@ -479,15 +481,15 @@ button:hover {
         font-size: 16px;
     }
 
-    .email {
-        margin-right: 10px;
-        margin-left: 38px;
+    #email {
+        margin-right: 5px;
+        margin-left: 20px;
         text-align: left;
     }
 
     #btn {
-        margin-left: 10px;
-        margin-right: 38px;
+        margin-left: 5px;
+        margin-right: 20px;
     }
 
     .card {
@@ -502,7 +504,15 @@ button:hover {
   }
 
   @media screen and (min-width: 800px) {
-.card2 {
+    #email {
+        margin-left: 11px;
+    }
+
+    #btn {
+        margin-right: 11px;
+    }
+
+    .card2 {
     display: flex;
     align-items: center;
     justify-content: center;
