@@ -49,14 +49,24 @@ Version:
     z-index: -1;
 }
 
+.logo img {
+    display: flex;
+    margin: auto;
+    margin-top: -500px;
+    width: 20vh;
+    height: auto;
+    background-color: black;
+    border-radius: 8px;
+    z-index: 1;
+}
+
 .card {
     background-color: #030303a4;
     position: relative;
     width: 85%;
-    height: 80vh;
+    height: 85vh;
     text-align: center;
-    padding-top: 25px;
-    z-index: 1;
+    padding-top: 10px;
     animation: borderAnimation 6s ease-in-out infinite both alternate;
 }
 
