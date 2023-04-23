@@ -8,13 +8,6 @@
     <title>Tamra Coming Soon</title>
 </head>
 <body>
-    <!--Preloader start-->
-    <div id="preloader">
-        <div class="ring"></div>
-        <span class="loading">Loading...</span>
-    </div>
-    <!--Preloader end-->
-
     <!--Background, card, header and text-->
     <section class="container">
         <img src="./images/IMG_20220301_113549133_HDR.jpg" alt="" class="image">
@@ -50,7 +43,7 @@
             <!--Subscribe section-->
             <div class="email-content">
                 <p class="subscribe-text">Subscribe now to get notified when we launch</p>
-                <form onSubmit="return validate()">
+                <form onSubmit="return validateEmail()">
                     <div class="input-box">
                         <input class="emailnotify" type="email" id="email" placeholder="Enter your e-mail">
                         <button id="btn">Notify Me</button>

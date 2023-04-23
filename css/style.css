@@ -10,15 +10,14 @@ Version:
 /*==========================
          CSS INDEX
 ============================
-    1. Preloader
-    2. Card and texts
-    3. Time countdown
-    4. E-mail input box and "Notify Me" button
-    5. About and contact links
-    6. About page
-    7. Contact page
-    8. Tablet size
-    9. Desktop size
+    1. Card and texts
+    2. Time countdown
+    3. E-mail input box and "Notify Me" button
+    4. About and contact links
+    5. About page
+    6. Contact page
+    7. Tablet size
+    8. Desktop size
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
@@ -30,71 +29,7 @@ Version:
     font-family: 'Merriweather', serif;
 }
 
-/*Preloader start*/
-#preloader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    z-index: 99;
-}
-
-.preloaded {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.ring {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: ring 3s linear infinite;
-}
-
-@keyframes ring {
-    0% {
-        transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #0456c8;
-    }
-    50% {
-        transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #e65c00;
-    }100% {
-        transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #18b201;
-    }
-}
-
-.ring:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
-}
-
-.loading {
-    color: #737373;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 200px;
-    animation: text 3s ease-in-out infinite;
-}
-
-@keyframes text {
-    50% {
-        color: white;
-    }
-}
-/*Preloader ends*/
-
-/*Card and texts*/
+/* 1. Card and texts*/
 .container {
     display: flex;
     align-items: center;
@@ -143,7 +78,6 @@ Version:
     }
 }
 
-
 h1 {
     position: relative;
     font-size: 34px;
@@ -171,7 +105,7 @@ p {
     margin: 0 20px 10px 20px;
 }
 
-/*Time count down*/
+/* 2. Time count down*/
 .container .time-content {
     display: flex;
     align-items: center;
@@ -197,7 +131,7 @@ p {
 }
 
 
-/*E-mail input box and "Notify Me" button*/
+/*3. E-mail input box and "Notify Me" button*/
 .email-content {
     margin-top: 35px;
 }
@@ -208,16 +142,17 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-
     margin-left: 40px;
     margin-right: 40px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #error1 {
-    margin-top: 5px;
+    margin: 15px auto;
     display: block;
     font-size: 16px;
+    width: 63vh;
+    border-radius: 8px;
   }
 
 .subscribe-text {
@@ -236,8 +171,8 @@ p {
 }
 
 #btn {
-    padding: 13px;
-    width: 22vh;
+    padding: 12px;
+    width: 23vh;
     font-size: 14px;
     border-radius: 8px;
     border: none;
@@ -255,10 +190,10 @@ p {
     background-color: #fa946f;
 }
 
-/*About and contact links*/
+/*4. About and contact links*/
 .about-contact {
     display: flex;
-    margin: -80px 10px 20px 10px;
+    margin: -50px 10px 20px 10px;
     text-decoration: none;
 }
 
@@ -338,9 +273,9 @@ p {
 
 .card2 {
     width: 90%;
-    height: 155vh;
+    height: 160vh;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.374);
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 30px 20px;
     border-radius: 12px;
     background-color: white;
 }
@@ -385,6 +320,7 @@ p {
 
   .contact-container1{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 70px;
@@ -409,11 +345,12 @@ p {
     border-radius: 8px;
     border: none;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .contactbtn {
     margin: auto;
+    margin-top: 10px;
     padding: 12px;
     width: 22vh;
     font-size: 15px;
@@ -432,6 +369,13 @@ button:hover {
     background-color: #a5abc6;
     width: 23vh;
 }
+
+#error {
+    margin-top: 480px;
+    display: block;
+    font-size: 16px;
+    position: absolute;
+  }
 
   /*Tablet size*/
   @media screen and (min-width: 700px) { 
@@ -473,12 +417,12 @@ button:hover {
         justify-content: center;
     }
 
-    #error1 {
-        font-size: 20px;
+    #error, #error1 {
+        font-size: 18px;
       }
 
     .subscribe-text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #email {
@@ -519,18 +463,14 @@ button:hover {
     height: 80vh;
 }
 
-.contact-h1 {
-    margin-top: 168px;
-}
-
 .contact-container {
     margin-right: 18px;
-    margin-top: -223px;
+    margin-top: -90px;
 }
 
 .contact-container1 {
     margin-left: 18px;
-    margin-top: 30px;
+    margin-top: 26px;
 }
 }
 
