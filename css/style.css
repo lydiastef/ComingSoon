@@ -55,8 +55,8 @@ Version:
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-left: 41%;
-    margin-top: -578px;
+    margin-left: 35%;
+    margin-top: -830px;
     width: 14vh;
     height: auto;
     border-radius: 8px;
@@ -67,7 +67,7 @@ Version:
     background-color: #030303a4;
     position: relative;
     width: 85%;
-    height: 80vh;
+    height: 65vh;
     text-align: center;
     padding-top: 10px;
     animation: borderAnimation 6s ease-in-out infinite both alternate;
@@ -132,8 +132,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 25px;
+    column-gap: 20px;
     align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .time-content .time {
@@ -145,11 +147,11 @@ p {
 }
 
 .time .number {
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .time .text {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
@@ -172,8 +174,8 @@ p {
 #error1 {
     margin: 15px auto;
     display: block;
-    font-size: 16px;
-    width: 63vh;
+    font-size: 14px;
+    width: 35vh;
     border-radius: 8px;
   }
 
@@ -184,7 +186,7 @@ p {
 
 #email {
     padding: 12px;
-    width: 50vh;
+    width: 30vh;
     border-radius: 8px;
     border: none;
     margin-top: 10px;
@@ -194,7 +196,7 @@ p {
 
 #btn {
     padding: 12px;
-    width: 23vh;
+    width: 15vh;
     font-size: 14px;
     border-radius: 8px;
     border: none;
@@ -220,7 +222,7 @@ p {
 }
 
 .about-link {
-    margin: 10px 100px 0 0;
+    margin: 10px 60px 0 0;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -233,7 +235,7 @@ p {
 }
 
 .contact-link {
-    margin: 10px 0 0 100px;
+    margin: 10px 0 0 60px;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -416,6 +418,7 @@ button:hover {
 
     .logo img {
         margin-left: 45%;
+        margin-top: 200px;
     }
 
     h1 {
@@ -508,7 +511,7 @@ button:hover {
     }
 
     .logo img {
-        margin-top: -585px;
+        margin-top: -785px;
         margin-left: 47%;
         width: 16vh;
     }
